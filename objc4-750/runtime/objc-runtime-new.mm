@@ -38,6 +38,7 @@
 
 #define newprotocol(p) ((protocol_t *)p)
 
+/***********************************************************/
 static void disableTaggedPointers();
 static void detach_class(Class cls, bool isMeta);
 static void free_class(Class cls);
@@ -5080,8 +5081,8 @@ Class gdb_object_getClass(id obj)
 void 
 objc_class::setInitialized()
 {
-    Class metacls;
-    Class cls;
+    Class metacls; // 元类
+    Class cls; // 类
 
     assert(!isMetaClass());
 
